@@ -238,28 +238,20 @@ if __name__ == "__main__":
         
 
     rendersetting = {}
-    rendersetting["render_flg"] = False
+    rendersetting["render_flg"] = True
     rendersetting["screenwidth"] = 128
     rendersetting["screenhight"] = 128
     rendersetting["plt_switch"]  = True
-    robot = ImiRob('/home/xiaotian/CML/MjPush/xmls/lab_env.xml',rendersetting,showarm=False)
+    robot = ImiRob(rendersetting,showarm=True)
     robot.setcam(distance=2.0,azimuth=45,elevation=-60,lookat=[-0.8,0.4,0])
   
-
     while True:
         robot.reset()
-        keepmoving = True
-        for i in range(10):
-            if i  == 5:
-                robot.random_move_cube()
-            robot.offscreenshow()
+        for i in range(100):
+            # if i  == 5:
+            #     robot.random_move_cube()
+            robot.onscreenshow()
             
-            if robot.check_contacts():
-                from IPython import embed
-                embed()
-                assert False
-        plt.pause(5e-1)
-
     
 
 
