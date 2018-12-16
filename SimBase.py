@@ -44,9 +44,9 @@ class ImiRob:
 
     def __init__(self,rendersetting,frame_skip=4,objnum=4,showarm=False):
         if showarm:
-            xmlsource = '/home/xiaotian/CML/MjPush/xmls/show_env.xml'
+            xmlsource = '/home/cml/CML/MjPushData/xmls/show_env.xml'
         else:
-            xmlsource = '/home/xiaotian/CML/MjPush/xmls/lab_env.xml'
+            xmlsource = '/home/cml/CML/MjPushData/xmls/lab_env.xml'
 
         self.model =  load_model_from_path(xmlsource)
         self.sim = MjSim(self.model)
@@ -171,7 +171,7 @@ class ImiRob:
         qvel = self.init_qvel.copy()
   
         if self.showarm:
-            qpos = np.array([0.1, -50 / 180 * math.pi, 61.03 / 180 * math.pi,
+            qpos = np.array([0.2, -90 / 180 * math.pi, 70 / 180 * math.pi,
                0, 0, 0, # robotic arm
                0, 0, 0, 0,
                0, 0, 0, 0, # two fingers
@@ -238,7 +238,7 @@ if __name__ == "__main__":
         
 
     rendersetting = {}
-    rendersetting["render_flg"] = True
+    rendersetting["render_flg"] = True 
     rendersetting["screenwidth"] = 128
     rendersetting["screenhight"] = 128
     rendersetting["plt_switch"]  = True
@@ -251,6 +251,7 @@ if __name__ == "__main__":
             # if i  == 5:
             #     robot.random_move_cube()
             robot.onscreenshow()
+            # robot.offscreenshow()
             
     
 

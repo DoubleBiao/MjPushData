@@ -62,7 +62,7 @@
         <geom name="robotiq_85_inner_knuckle_link_mesh" type="mesh" mesh="robotiq_85_inner_knuckle_link" pos="0.4 0 1" />
         <geom name="robotiq_85_knuckle_link_mesh" type="mesh" mesh="robotiq_85_knuckle_link" pos="0.5 0 1" /-->
 
-        <body name="base_link" pos="-0.175 0.175 0" quat="0.3826834324 0 0 0.9238795325" >
+        <body name="base_link" pos="0.1 0.175 0" quat="0.3826834324 0 0 0.9238795325" >
             <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="4" diaginertia="0.0072 0.00443333 0.00443333" />
             <geom name="base_mesh" type="mesh" mesh="base" material="RobMat" />
             <geom name="base_cap" type="cylinder" pos="0 0 0.14" size="0.06 0.02" rgba="0.596 0.96 1 1" material="RobMat" contype="0" conaffinity="0" />
